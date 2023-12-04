@@ -1,0 +1,18 @@
+void setup()
+{
+    pinMode(5,OUTPUT);
+    Serial.begin(9600); 
+}
+
+void loop()
+{
+ int isik = analogRead(A0); 
+  Serial.println(isik); 
+  delay(50);
+  if (isik >= 535) { 
+    digitalWrite(5, LOW); 
+  }
+  if (isik < 535) { 
+    digitalWrite(5, HIGH); 
+  }
+}
